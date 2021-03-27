@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Dict
 from unittest.mock import patch
 
+import numpy as np
 import pytest
 from torch import Tensor
 
@@ -28,10 +29,10 @@ def test_torchaudio_download(tmp_path: Path, dummy_data: Dict[str, Path]):
     assert len(dataset) == 4
 
     # Check one instance
-    waveform, sample_rate, rating = dataset[0]
-    assert isinstance(waveform, Tensor)
-    assert isinstance(sample_rate, int)
-    assert isinstance(rating, float)
+    example = dataset[0]
+    assert isinstance(example['audio'], Tensor)
+    assert isinstance(example['sample_start'], np.int64)
+    assert isinstance(example['rating'], float)
 
     # Check that files are not downloaded again
     with patch("torchaudio.datasets.utils.download_url") as patched:
