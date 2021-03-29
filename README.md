@@ -1,7 +1,7 @@
 # Perceived Music Quality Dataset (PMQD)
 
 ## Intro
-This repository contain the dataset produced for the paper [Perceiving Music
+This repository contains the dataset produced for the paper [Perceiving Music
 Quality with GANs](https://arxiv.org/abs/2006.06287) [[1]](#1) in collaboration
 between Peltarion and Epidemic Sound. The purpose is to evaluate methods for
 quality rating music. It contains 975 segments from songs across 13 genres,
