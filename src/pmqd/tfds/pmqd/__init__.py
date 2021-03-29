@@ -1,3 +1,3 @@
 """PMQD dataset."""
 
-from .pmqd import PMQD  # noqa: F401
+from .pmqd import PMQD
