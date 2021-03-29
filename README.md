@@ -1,13 +1,12 @@
 # Perceived Music Quality Dataset (PMQD)
 
 ## Intro
-This repository contain the dataset produced for the paper
-[Perceiving Music Quality with GANs](https://arxiv.org/abs/2006.06287) [[1]](#1)
-in collaboration between
-Peltarion and Epidemic Sound. The purpose is to evaluate methods for quality
-rating music. It contains 975 segments from songs across 13 genres, with
-degradations of various intensities applied. Each clip has an associated human
-perceived quality rating, from 1 (`Bad`) to 5 (`Excellent`), which is the
+This repository contain the dataset produced for the paper [Perceiving Music
+Quality with GANs](https://arxiv.org/abs/2006.06287) [[1]](#1) in collaboration
+between Peltarion and Epidemic Sound. The purpose is to evaluate methods for
+quality rating music. It contains 975 segments from songs across 13 genres,
+with degradations of various intensities applied. Each clip has an associated
+human perceived quality rating, from 1 (`Bad`) to 5 (`Excellent`), which is the
 median value of the rating assigned by 5 different people.
 
 
@@ -25,7 +24,7 @@ The following data is hosted in the
 |:------------------------------------------------------------------------|:---------------------------------------------------------------------------|
 | https://github.com/Peltarion/pmqd/releases/latest/download/audio.tgz    | Archive with all music segments at 48kHz / 24-bit.                         |
 | https://github.com/Peltarion/pmqd/releases/latest/download/audio32.tgz  | Archive with all music segments at the increased bit depth 48kHz / 32-bit. |
-| https://github.com/Peltarion/pmqd/releases/latest/download/pmqd.csv | Metadata (ratings and song information).                                   |
+| https://github.com/Peltarion/pmqd/releases/latest/download/pmqd.csv     | Metadata (ratings and song information).                                   |
 
 ### Torch
 Install `pmqd` with additional [PyTorch](https://pytorch.org/) and
@@ -188,12 +187,12 @@ segment evaluations.
 During a task, each participant is asked to specify which type of device they
 will use for listening from the list: `smartphone speaker`, `speaker`,
 `headphones`, `other`, `will not listen`. If any other option than `speaker` or
-`headphones` was selected, the submission is rejected and the task re-assigned.
-For each segment in the task, we ask the user for an assessment of audio
-quality, not musical content[[2]](#2). The question is phrased as: _"How do you
-rate the audio quality of this music segment?"_, and may be answered on the
-ordinal scale: _Bad_, _Poor_, _Fair_, _Good_ and _Excellent_, corresponding to
-the numerical values 1, 2, 3, 4, 5.
+`headphones` was selected, the submission was rejected and the task
+re-assigned.  For each segment in the task, we ask the user for an assessment
+of audio quality, not musical content[[2]](#2). The question is phrased as:
+_"How do you rate the audio quality of this music segment?"_, and may be
+answered on the ordinal scale: _Bad_, _Poor_, _Fair_, _Good_ and _Excellent_,
+corresponding to the numerical values 1, 2, 3, 4, 5.
 
 #### Rating aggregation
 Once all tasks are completed, the ratings are aggregated to produce one
@@ -223,8 +222,8 @@ The following are the average ratings assigned by degradation intensity and
 distortion type. As expected, some degradations (distortion and noise) have a
 much larger impact on the quality than others. Furthermore, we note that the
 original tracks are on average rated below the excellent quality mark, despite
-being high-fidelity recordings. Part of this could be explained by user
-expectations.
+being high-fidelity recordings. Part of this could be explained by the
+annotators expectations.
 
 | Degradation intensity   |   Distortion |   Limiter |   Lowpass |   Noise |   Original |
 |:------------------------|-------------:|----------:|----------:|--------:|-----------:|
