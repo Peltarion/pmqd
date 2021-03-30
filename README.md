@@ -52,8 +52,8 @@ for batch in dataloader:
 
 ### TFDS
 This requires [ffmpeg](https://ffmpeg.org/) on the target system, and has to be
-installed manually install manually (e.g. for MacOS do `brew install ffmpeg` (
-[formula](https://formulae.brew.sh/formula/ffmpeg))). Alternatively,
+installed manually install manually (e.g. for MacOS do `brew install ffmpeg`
+([formula](https://formulae.brew.sh/formula/ffmpeg))). Alternatively,
 see the [docker instructions](#docker) below.
 
 Install `pmqd` with additional [Tensorflow](http://tensorflow.org/) and
