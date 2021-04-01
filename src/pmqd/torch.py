@@ -89,7 +89,6 @@ class PMQD(Dataset):
         return {
             "id": n,
             "genre": row["genre"],
-            "artist": row["artist"],
             "title": row["title"],
             "degradation_type": row["degradation_type"],
             "degradation_intensity": row["degradation_intensity"],

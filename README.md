@@ -12,9 +12,9 @@ median value of the rating assigned by 5 different people.
 
 ## Usage
 The dataset consists of a CSV file with metadata (rating and information about
-each segment, including genre, artist, track) and the corresponding audio
-segments. These may be downloaded and used directly. For simplicity, we provide
-code to load the data in both PyTorch and Tensorflow.
+each segment, including genre, title) and the corresponding audio segments.
+These may be downloaded and used directly. For simplicity, we provide code to
+load the data in both PyTorch and Tensorflow.
 
 ### Contents
 The following data is hosted in the
@@ -92,7 +92,6 @@ The metadata table contains the following columns:
 
 - **id:** ID of sample.
 - **genre:** Genre.
-- **artist:** Artist.
 - **title:** Title.
 - **degradation_type:** Type of applied degradation (see [Degrading audio
   quality](#degrading-audio-quality)).
@@ -104,13 +103,13 @@ The metadata table contains the following columns:
 
  Below is a random sample of the contents:
 
-|   id | genre      | artist                       | title                                | degradation_type   |   degradation_intensity |   rating |   sample_start | sample_filename                      |
-|-----:|:-----------|:-----------------------------|:-------------------------------------|:-------------------|------------------------:|---------:|---------------:|:-------------------------------------|
-|  137 | Blues      | Martin Carlberg              | Bad Bad Blood (Instrumental Version) | original           |                    0.00 |     5.00 |            130 | 04694c6cb0cb4833906259ee961d53b8.wav |
-|  448 | Rnb & Soul | Park Lane feat. Vincent Vega | I Don't Wanna Be You                 | limiter            |                   90.16 |     4.00 |            199 | 0b6856dacd8d4c19ad9f25e4f2fe3f02.wav |
-|  850 | Blues      | Henrik Nagy                  | Strolling In New Orleans 1           | noise              |                   20.67 |     2.00 |             34 | 71982b5dbf1a4d6f86e9638fb3574f97.wav |
-|   80 | Country    | Martin Carlberg              | Appalachian Trail 2                  | original           |                    0.00 |     4.00 |             98 | d4404cbff14244d58450fa5c73c97481.wav |
-|  675 | Funk       | Teddy Bergström              | Godspel Groove                       | lowpass            |                   63.92 |     3.00 |             31 | 5df0c95dda78408aa7f73fbad7c029cc.wav |
+|   id | genre      | title                                | degradation_type   |   degradation_intensity |   rating |   sample_start | sample_filename                      |
+|-----:|:-----------|:-------------------------------------|:-------------------|------------------------:|---------:|---------------:|:-------------------------------------|
+|  137 | Blues      | Bad Bad Blood (Instrumental Version) | original           |                    0.00 |     5.00 |            130 | 04694c6cb0cb4833906259ee961d53b8.wav |
+|  448 | Rnb & Soul | I Don't Wanna Be You                 | limiter            |                   90.16 |     4.00 |            199 | 0b6856dacd8d4c19ad9f25e4f2fe3f02.wav |
+|  850 | Blues      | Strolling In New Orleans 1           | noise              |                   20.67 |     2.00 |             34 | 71982b5dbf1a4d6f86e9638fb3574f97.wav |
+|   80 | Country    | Appalachian Trail 2                  | original           |                    0.00 |     4.00 |             98 | d4404cbff14244d58450fa5c73c97481.wav |
+|  675 | Funk       | Godspel Groove                       | lowpass            |                   63.92 |     3.00 |             31 | 5df0c95dda78408aa7f73fbad7c029cc.wav |
 
 
 ### Source

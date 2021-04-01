@@ -34,7 +34,7 @@ _CITATION = """
 """
 
 URL_AUDIO = "https://storage.googleapis.com/pmqd/audio.tgz"
-URL_METADATA = "https://storage.googleapis.com/pmqd/pmqd.csv"
+URL_METADATA = "https://storage.googleapis.com/pmqd/redacted/pmqd.csv"
 FOLDER_IN_ARCHIVE = "audio"
 
 
@@ -55,7 +55,6 @@ class PMQD(tfds.core.GeneratorBasedBuilder):
                 {
                     "id": tfds.features.Tensor(shape=(), dtype=tf.int32),
                     "genre": tfds.features.Text(),
-                    "artist": tfds.features.Text(),
                     "title": tfds.features.Text(),
                     "degradation_type": tfds.features.ClassLabel(
                         names=["original", "distortion", "limiter", "lowpass", "noise"]
@@ -99,7 +98,6 @@ class PMQD(tfds.core.GeneratorBasedBuilder):
             yield i, {
                 "id": i,
                 "genre": row["genre"],
-                "artist": row["artist"],
                 "title": row["title"],
                 "degradation_type": row["degradation_type"],
                 "degradation_intensity": row["degradation_intensity"],
